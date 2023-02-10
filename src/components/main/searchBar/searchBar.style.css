@@ -1,0 +1,27 @@
+.search-bar{
+    display: flex;
+    width: 80%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.search-bar img {
+    width: 30px;
+    cursor: pointer;
+}
+
+.search-bar input {
+    height: 30px;
+    padding-left: 10px;
+    background-color: transparent;
+    border-radius: 25px;
+    border: none;
+    flex: 1;
+    font-size: 22px;
+    color: white   ;
+}
+
+.search-bar input:focus-visible {
+   outline: none;
+}
