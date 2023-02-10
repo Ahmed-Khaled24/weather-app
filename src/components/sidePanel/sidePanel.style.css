@@ -1,0 +1,30 @@
+.side-panel {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    border-right: 1px solid #ADB5BD;
+}
+
+.logo {
+    padding: 10%;
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 10vh;
+}
+
+.side-panel-elements {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.side-panel-element {
+    font-size: 28px;
+    padding: 15px;
+    padding-left: 20%;
+}
+
+.selected {
+    border-right: 4px solid white;
+    background-color: rgba(255, 255, 255, 0.1);
+}
