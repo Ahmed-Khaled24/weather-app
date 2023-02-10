@@ -1,0 +1,19 @@
+.main{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    align-items: center;
+    gap: 30px;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.small-cards {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, 40%);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px;
+    justify-content: center;
+}
