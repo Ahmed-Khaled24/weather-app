@@ -2,7 +2,7 @@ import './searchBar.style.css';
 import searchIcon from '../../../assets/search-icon.svg';
 
 type Props = {
-	setLocation: React.Dispatch<React.SetStateAction<string>>;
+	setLocation: React.Dispatch<React.SetStateAction<string | [number, number]>>;
 };
 
 const SearchBar = ({ setLocation }: Props) => {

@@ -11,7 +11,7 @@ import SearchBar from './searchBar/searchBar.component';
 
 type Props = {
 	weatherStatus: WeatherStatusData;
-	setLocation: React.Dispatch<React.SetStateAction<string>>
+	setLocation: React.Dispatch<React.SetStateAction<string | [number, number]>>
 }
 
 const Main = ({ weatherStatus, setLocation }: Props) => {
