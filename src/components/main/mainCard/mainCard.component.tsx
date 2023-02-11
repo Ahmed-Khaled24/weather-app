@@ -2,7 +2,6 @@ import { WeatherStatusData } from '../../../types/weather.types';
 import WeatherSegment from '../weatherSegment/weatherSegment.component';
 import locationIcon from '../../../assets/location-icon.svg';
 import windIcon from '../../../assets/wind-icon.svg';
-import rainIcon from '../../../assets/water-drop-icon.svg';
 import pressureIcon from '../../../assets/pressure-icon.svg';
 import './mainCard.style.css';
 
