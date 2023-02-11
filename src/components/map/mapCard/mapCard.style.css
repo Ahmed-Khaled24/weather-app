@@ -1,0 +1,24 @@
+.map-card{
+    background-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 15%;
+    padding: 20px;
+    border-radius: 25px;
+}
+.map-card p{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 28px;
+}
+
+.map-card img {
+    width: 35px;
+}
+
+.map-card-temp {
+    font-size: 68px !important;
+}
