@@ -1,13 +1,15 @@
 type WeatherStatusData = {
+    temperature: number;
+    feelsLike: number;
+    pressure: number;
+    humidity: number;
+    windSpeed: number;
+    rainChance: number;
+    clouds: number;
     status: string;
-    temperature: string;
-    feelsLike: string;
-    humidity: string;
-    windSpeed: string;
-    rainChance: string;
-    pressure: string;
     location: string;
     iconCode: string;
+    weatherDescription: string;
 }
 
 export type {WeatherStatusData};
