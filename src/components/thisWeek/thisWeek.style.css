@@ -1,0 +1,19 @@
+.this-week {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    border-left: 2px solid rgba(255, 255, 255, 0.1);
+    gap: 40px;
+}
+
+.elements-container{
+ display: flex;
+ flex-direction: column;
+ gap: 25px;
+}
+
+.this-week-title {
+    font-size: 36px;
+    text-align: center;
+}
