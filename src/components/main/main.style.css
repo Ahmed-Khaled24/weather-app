@@ -1,11 +1,11 @@
 .main{
-    padding: 30px;
+    padding: 25px;
     display: flex;
     flex-direction: column;
     width: 60%;
     align-items: center;
     gap: 30px;
-    justify-content: center;
+    justify-content: space-evenly;
     min-height: 100vh;
 }
 
