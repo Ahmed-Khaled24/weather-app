@@ -7,7 +7,8 @@ interface Props {
 
 const SidePanel = ({ elements }: Props) => {
 	const route = useLocation();
-	const currentRoute = route.pathname.replace('/', '');
+	const currentRoute = route.pathname.replaceAll('/', '').replace('weather-app', '');
+	
 	return (
 		<div className='side-panel'>
 			<p className='logo'> Weather </p>
@@ -22,7 +23,7 @@ const SidePanel = ({ elements }: Props) => {
 					return (
 						<Link
 							className={`side-panel-element ${selected}`}
-							to={el.toLowerCase()}
+							to={`/weather-app/${el.toLowerCase()}`}
 						>
 							{el}
 						</Link>
