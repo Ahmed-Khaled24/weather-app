@@ -14,7 +14,7 @@ const MainCard = ({ weatherStatus, background }: Props) => {
 	const { temperature, windSpeed, pressure, location, weatherDescription } =
 		weatherStatus;
 	return (
-		<div className={`main-card rainy`}>
+		<div className={`main-card ${background}`}>
 			<WeatherSegment
 				alt='loc-icon'
 				text={location}

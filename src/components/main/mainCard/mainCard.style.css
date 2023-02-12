@@ -12,20 +12,24 @@
 	color: white;
 }
 
-.snowy {
+.snow {
     background-image: url('../../../assets/mainCard/snowy.jpg');
 }
 
-.rainy {
+.rain {
     background-image: url('../../../assets/mainCard/rainy.jpg');
 }
 
-.sunny {
-    background-image: url('../../../assets/mainCard/sunny.jpg');
+.drizzle {
+	background-image: url('../../../assets//mainCard/rainy.jpg');
 }
 
 .clear {
-    background-image: url('../../../assets/mainCard/sunny.jpg');
+    background-image: url('../../../assets/mainCard/clear.jpg');
+}
+
+.clouds {
+	background-image: url('../../../assets/mainCard/cloudy.jpg');
 }
 
 .main-card img {

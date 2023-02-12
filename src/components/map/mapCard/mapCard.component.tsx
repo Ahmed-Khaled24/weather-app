@@ -4,11 +4,12 @@ import locationIcon from '../../../assets/location-icon.svg';
 type Props = {
 	currentTemp: number;
 	currentLocation: string;
+	background: string;
 };
 
-const MapCard = ({ currentTemp, currentLocation }: Props) => {
+const MapCard = ({ currentTemp, currentLocation, background }: Props) => {
 	return (
-		<div className='map-card'>
+		<div className={`map-card ${background}`}>
 			<p>
 				<img src={locationIcon} alt='location-icon' />
 				{currentLocation}

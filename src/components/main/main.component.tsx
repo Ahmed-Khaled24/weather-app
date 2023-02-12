@@ -19,7 +19,7 @@ const Main = ({ weatherStatus, setLocation }: Props) => {
 	return (
 		<div className='main'>
 			<SearchBar setLocation={setLocation}/>
-			<MainCard weatherStatus={weatherStatus} background='' />
+			<MainCard weatherStatus={weatherStatus} background={weatherStatus.status.toLowerCase()} />
 			<div className='small-cards'>
 				<SmallCard
 					title={'Feels Like'}

@@ -7,10 +7,11 @@ import { useState } from 'react';
 type Props = {
 	currentTemp: number;
 	currentLocation: string;
+	weatherStatus: string;
 	setLocation: React.Dispatch<React.SetStateAction<string | [number, number]>>;
 };
 
-const Map = ({ currentTemp, setLocation, currentLocation }: Props) => {
+const Map = ({ currentTemp, setLocation, currentLocation, weatherStatus }: Props) => {
 	const [coordinates, setCoordinates]: [
 		{lat: number, lng: number},
 		React.Dispatch<React.SetStateAction<{lat: number, lng: number}>>
@@ -19,7 +20,8 @@ const Map = ({ currentTemp, setLocation, currentLocation }: Props) => {
 		<div className='map'>
 			<MapCard
 				currentTemp={currentTemp}
-				currentLocation={currentLocation}			
+				currentLocation={currentLocation}	
+				background={weatherStatus}		
 			/>
 			<ActualMap setCoordinates={setCoordinates} />
 			<MapSearch coordinates={coordinates} setLocation={setLocation} />
