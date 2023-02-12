@@ -12,14 +12,14 @@ type Props = {
 
 const Map = ({ currentTemp, setLocation, currentLocation }: Props) => {
 	const [coordinates, setCoordinates]: [
-		[number, number],
-		React.Dispatch<React.SetStateAction<[number, number]>>
-	] = useState([0, 0]);
+		{lat: number, lng: number},
+		React.Dispatch<React.SetStateAction<{lat: number, lng: number}>>
+	] = useState({lat: 0, lng: 0});
 	return (
 		<div className='map'>
 			<MapCard
 				currentTemp={currentTemp}
-				currentLocation={currentLocation}
+				currentLocation={currentLocation}			
 			/>
 			<ActualMap setCoordinates={setCoordinates} />
 			<MapSearch coordinates={coordinates} setLocation={setLocation} />

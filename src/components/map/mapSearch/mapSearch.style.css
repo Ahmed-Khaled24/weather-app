@@ -1,6 +1,6 @@
 .map-search {
     display: flex;
-    border-radius: 25px;
+    border-radius: 15px;
     border: 1px solid rgba(255,255,255,0.2);
     width: 90%;
     gap: 15px;
@@ -28,10 +28,10 @@
 .map-search button{
     width: 15%;
     padding: 12px 20px 12px 16px; 
-    font-size: 22px;
+    font-size: 24px;
     height: 100%;
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
     background-color: #ced4da;
     color:#343a40;
     border: none;
@@ -45,6 +45,6 @@
 }
 
 .map-search button:hover{
-    background-color: transparent;
+    background-color: #087f5b;
     color:white;
 }

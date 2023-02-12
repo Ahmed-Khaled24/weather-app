@@ -4,3 +4,8 @@
     height: 75%;
     width: 90%;
 }
+.leaflet-container {
+    border-radius: 25px;
+    width: 48vw;
+    height: 65vh;
+}
