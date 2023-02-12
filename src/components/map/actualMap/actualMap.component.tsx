@@ -22,7 +22,7 @@ const ActualMap = ({setCoordinates}: Props) => {
         <MapContainer center={[30.0444, 31.2357]} zoom={13} scrollWheelZoom={true}>
             <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                url="https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png?api_key=a1b10435-899d-4f36-899a-5444aa3388bb"
             />
             <MapEventHandler setCoordinates={setCoordinates}/>
         </MapContainer>  
