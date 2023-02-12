@@ -1,25 +1,29 @@
 import './sidePanel.style.css';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 interface Props {
 	elements: string[];
-	currentRoute: string;
-	setCurrentRoute: React.Dispatch<React.SetStateAction<string>>,
 }
 
-const SidePanel = ({ elements, currentRoute, setCurrentRoute }: Props) => {
+const SidePanel = ({ elements }: Props) => {
+	const route = useLocation();
+	const currentRoute = route.pathname.replace('/', '');
 	return (
 		<div className='side-panel'>
 			<p className='logo'> Weather </p>
 			<div className='side-panel-elements'>
 				{elements.map((el) => {
-					let selected = currentRoute.toLowerCase() === el.toLowerCase() ? 'selected' : '';
+					let selected =
+						currentRoute === el.toLowerCase() ? 'selected' : '';
+					selected =
+						currentRoute === '' && el === 'Main'
+							? 'selected'
+							: selected;
 					return (
 						<Link
 							className={`side-panel-element ${selected}`}
 							to={el.toLowerCase()}
-							onClick={() => setCurrentRoute(el.toLowerCase())}
-						>	
+						>
 							{el}
 						</Link>
 					);
