@@ -38,9 +38,7 @@ function constructWeatherStatusData(res: DayForecastData): WeatherStatusData {
 
 function constructThisWeekElementsData(_5Days: DayForecastData[]): ThisWeekElementData[]{
 	let elementsData: ThisWeekElementData[] = [];
-	_5Days.forEach((day, index) => {
-		console.log(day.weather);
-		
+	_5Days.forEach((day, index) => {		
 		elementsData.push({
 			day: getDayOfWeek(day.dt_txt, index),
 			date: getDate(day.dt_txt),
