@@ -7,7 +7,7 @@ interface Props {
 
 const SidePanel = ({ elements }: Props) => {
 	const route = useLocation();
-	const currentRoute = route.pathname.replaceAll('/', '').replace('weather-app', '');
+	const currentRoute = route.pathname.replace('/', '');
 	
 	return (
 		<div className='side-panel'>
@@ -23,13 +23,14 @@ const SidePanel = ({ elements }: Props) => {
 					return (
 						<Link
 							className={`side-panel-element ${selected}`}
-							to={`/weather-app/${el.toLowerCase()}`}
+							to={el.toLowerCase()}
 						>
 							{el}
 						</Link>
 					);
 				})}
 			</div>
+			<a href='https://www.linkedin.com/in/ahmedkhaled24/' className='copy-rights'>&copy; Ahmed Khaled </a>
 		</div>
 	);
 };
