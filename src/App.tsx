@@ -75,7 +75,7 @@ function App() {
 				elements={['Main', 'Map']}
 			/>
 			<Routes>
-				{['/weather-app', '/weather-app/main'].map((path) => (
+				{['/', '/main'].map((path) => (
 					<Route
 						path={path}
 						element={
@@ -87,7 +87,7 @@ function App() {
 					/>
 				))}
 				<Route
-					path='/weather-app/map'
+					path='/map'
 					element={
 						<Map
 							currentLocation={currentWeatherStatus.location}
