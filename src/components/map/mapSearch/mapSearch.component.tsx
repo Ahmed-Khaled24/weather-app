@@ -24,7 +24,7 @@ const MapSearch = ({ coordinates, setLocation }: Props) => {
 					);
 				}}
 			>
-				Go
+				Search
 			</button>
 		</div>
 	);

@@ -10,8 +10,8 @@ const MapEventHandler = ({setCoordinates}: Props) => {
     useMapEvent('click', (e) => {
         const {lat, lng} = e.latlng;
         setCoordinates({
-            lat, 
-            lng
+            lat: Number(lat.toPrecision(5)), 
+            lng: Number(lng.toPrecision(5))
         });
     })
     return null;
