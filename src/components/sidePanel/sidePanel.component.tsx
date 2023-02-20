@@ -30,7 +30,7 @@ const SidePanel = ({ elements }: Props) => {
 					);
 				})}
 			</div>
-			<a href='https://www.linkedin.com/in/ahmedkhaled24/' className='copy-rights'>&copy; Ahmed Khaled </a>
+			<a href='https://www.linkedin.com/in/ahmedkhaled24/' className='copy-rights' target='_blank' rel='noreferrer'>&copy; Ahmed Khaled </a>
 		</div>
 	);
 };
