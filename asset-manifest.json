@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/weather-app/static/css/main.3cfe59a6.css",
-    "main.js": "/weather-app/static/js/main.17da4891.js",
+    "main.css": "/weather-app/static/css/main.f5f679c0.css",
+    "main.js": "/weather-app/static/js/main.e1510d18.js",
     "static/js/787.d9312eb8.chunk.js": "/weather-app/static/js/787.d9312eb8.chunk.js",
     "static/media/cloudy.jpg": "/weather-app/static/media/cloudy.6501de7bd3e7058d4a03.jpg",
     "static/media/snowy.jpg": "/weather-app/static/media/snowy.1193f31988739ae6cc34.jpg",
@@ -9,18 +9,18 @@
     "static/media/rainy.jpg": "/weather-app/static/media/rainy.7be9c29da540b7c4fcfc.jpg",
     "static/media/wind-icon.svg": "/weather-app/static/media/wind-icon.07aba171ea32799e3d8cd646cc2981db.svg",
     "static/media/pressure-icon.svg": "/weather-app/static/media/pressure-icon.3df80eb8f74a6da803cc22ba4c4a1242.svg",
-    "static/media/humidity-icon.svg": "/weather-app/static/media/humidity-icon.5bd814845f283a1ac8c700110e0e1704.svg",
     "index.html": "/weather-app/index.html",
+    "static/media/humidity-icon.svg": "/weather-app/static/media/humidity-icon.5bd814845f283a1ac8c700110e0e1704.svg",
     "static/media/location-icon.svg": "/weather-app/static/media/location-icon.364053a77d576b3f0c3f4218042a44e1.svg",
     "static/media/cloud-icon.svg": "/weather-app/static/media/cloud-icon.495c6e2524ea8b509fb67469503f8efe.svg",
     "static/media/search-icon.svg": "/weather-app/static/media/search-icon.cbe5e2d42ed9af8dc56ca9e2b17b9e42.svg",
     "static/media/thermostat-icon.svg": "/weather-app/static/media/thermostat-icon.59acbe0f71eeef468a9e6f22020e1e5e.svg",
-    "main.3cfe59a6.css.map": "/weather-app/static/css/main.3cfe59a6.css.map",
-    "main.17da4891.js.map": "/weather-app/static/js/main.17da4891.js.map",
+    "main.f5f679c0.css.map": "/weather-app/static/css/main.f5f679c0.css.map",
+    "main.e1510d18.js.map": "/weather-app/static/js/main.e1510d18.js.map",
     "787.d9312eb8.chunk.js.map": "/weather-app/static/js/787.d9312eb8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3cfe59a6.css",
-    "static/js/main.17da4891.js"
+    "static/css/main.f5f679c0.css",
+    "static/js/main.e1510d18.js"
   ]
 }
