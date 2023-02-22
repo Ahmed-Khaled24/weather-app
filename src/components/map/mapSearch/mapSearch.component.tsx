@@ -10,7 +10,7 @@ type Props = {
 const MapSearch = ({ coordinates, setLocation }: Props) => {
 	return (
 		<div className='map-search'>
-			<label> Selected Coordinates: </label>
+			<label>Coordinates: </label>
 			<input
 				type='text'
 				readOnly

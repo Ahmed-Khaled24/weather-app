@@ -32,7 +32,7 @@ function App() {
 	const [location, setLocation]: [
 		string | [number, number],
 		React.Dispatch<React.SetStateAction<string | [number, number]>>
-	] = useState<string | [number, number]>('Cairo');
+	] = useState<string | [number, number]>(getCurrentLocation());
 
 	const [currentWeatherStatus, setCurrentWeatherStatus]: [
 		WeatherStatusData,
@@ -68,21 +68,40 @@ function App() {
 				setThisWeekElements(constructThisWeekElementsData(_5Days));
 			}).catch((err) => console.log);
 	}, [location]);
+	const [sidePanelState, setSidePanelState] = useState<string>('closed');
+
+	function toggleMobileNav() {
+		sidePanelState === 'closed'
+		? setSidePanelState('open')
+		: setSidePanelState('closed');
+	}
+	function closeMobileNav(){
+		setSidePanelState('closed');
+	}
+
+	function getCurrentLocation(): [number, number] {
+		let coordinates: [number, number] = [30.0444, 31.2357]; 
+		navigator.geolocation.getCurrentPosition((location) => {
+			coordinates = [ location.coords.latitude, location.coords.longitude];
+		});
+		return coordinates;
+	}
 
 	return (
 		<Fragment>
-			<SidePanel
-				elements={['Main', 'Map']}
-			/>
+			<span
+				className={`material-symbols-rounded hamburger`}
+				onClick={toggleMobileNav}
+			>
+				menu
+			</span>
+			<SidePanel elements={['Main', 'Map']} state={sidePanelState} closeMobileNav={closeMobileNav}/>
 			<Routes>
 				{['/', '/main'].map((path) => (
 					<Route
 						path={path}
 						element={
-							<Main
-								weatherStatus={currentWeatherStatus}
-								setLocation={setLocation}
-							/>
+							<Main weatherStatus={currentWeatherStatus} setLocation={setLocation} />
 						}
 					/>
 				))}
@@ -90,6 +109,7 @@ function App() {
 					path='/map'
 					element={
 						<Map
+							getCurrentLocation={getCurrentLocation}
 							currentLocation={currentWeatherStatus.location}
 							currentTemp={currentWeatherStatus.temperature}
 							setLocation={setLocation}

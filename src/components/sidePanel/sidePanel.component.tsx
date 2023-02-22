@@ -3,14 +3,16 @@ import { Link, useLocation } from 'react-router-dom';
 
 interface Props {
 	elements: string[];
+	state: string,
+	closeMobileNav: () => void,
 }
 
-const SidePanel = ({ elements }: Props) => {
+const SidePanel = ({ elements, state, closeMobileNav }: Props) => {
 	const route = useLocation();
 	const currentRoute = route.pathname.replace('/', '');
 	
 	return (
-		<div className='side-panel'>
+		<div className={`side-panel ${state}`}>
 			<p className='logo'> Weather </p>
 			<div className='side-panel-elements'>
 				{elements.map((el) => {
@@ -24,6 +26,7 @@ const SidePanel = ({ elements }: Props) => {
 						<Link
 							className={`side-panel-element ${selected}`}
 							to={el.toLowerCase()}
+							onClick={closeMobileNav}
 						>
 							{el}
 						</Link>

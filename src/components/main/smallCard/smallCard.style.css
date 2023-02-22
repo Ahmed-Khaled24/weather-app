@@ -30,3 +30,10 @@
     height: 60px;
     fill: white;
 }
+
+
+@media(max-width: 600px){
+	.text, .subtitle{
+        font-size: 20px;
+    }
+}

@@ -9,9 +9,10 @@ type Props = {
 	currentLocation: string;
 	weatherStatus: string;
 	setLocation: React.Dispatch<React.SetStateAction<string | [number, number]>>;
+	getCurrentLocation: () => [number, number];
 };
 
-const Map = ({ currentTemp, setLocation, currentLocation, weatherStatus }: Props) => {
+const Map = ({ currentTemp, setLocation, currentLocation, weatherStatus, getCurrentLocation }: Props) => {
 	const [coordinates, setCoordinates]: [
 		{lat: number, lng: number},
 		React.Dispatch<React.SetStateAction<{lat: number, lng: number}>>
@@ -23,7 +24,7 @@ const Map = ({ currentTemp, setLocation, currentLocation, weatherStatus }: Props
 				currentLocation={currentLocation}	
 				background={weatherStatus}		
 			/>
-			<ActualMap setCoordinates={setCoordinates} />
+			<ActualMap setCoordinates={setCoordinates} getCurrentLocation={getCurrentLocation}/>
 			<MapSearch coordinates={coordinates} setLocation={setLocation} />
 		</div>
 	);

@@ -1,11 +1,12 @@
-.actual-map{
-    background-color: black;
-    border-radius: 25px;
-    height: 75%;
-    width: 90%;
-}
 .leaflet-container {
     border-radius: 25px;
     width: 48vw;
     height: 65vh;
+    z-index: 0;
+}
+
+@media(max-width: 750px){
+    .leaflet-container {
+        width: 100%;
+    }
 }

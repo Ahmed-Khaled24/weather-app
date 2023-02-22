@@ -10,10 +10,27 @@
 }
 
 .small-cards {
-    width: 90%;
+    width: 80%;
     display: grid;
-    grid-template-columns: repeat(2, 40%);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 30px;
     justify-content: center;
+}
+
+@media(max-width: 750px){
+    .main{
+        width: 100%;
+        padding-top: 10px;
+    }
+    .small-cards{
+        width: 100%;
+    }
+}
+
+@media(max-width: 600px){
+    .small-cards{
+        display: flex;
+        flex-direction: column;
+    }
 }

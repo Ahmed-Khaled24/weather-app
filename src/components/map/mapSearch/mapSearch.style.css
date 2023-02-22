@@ -47,3 +47,20 @@
     background-color: #087f5b;
     color:white;
 }
+
+
+@media(max-width: 750px){
+    .map-search {
+        width: 100%;
+    }
+    .map-search input {
+        width: auto;
+        min-width: 100px;
+    }
+    .map-search button{
+        width: auto;
+    }
+    .map-search label{
+        width: fit-content;
+     }
+}

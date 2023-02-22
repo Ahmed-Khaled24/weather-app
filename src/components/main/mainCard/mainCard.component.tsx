@@ -15,13 +15,16 @@ const MainCard = ({ weatherStatus, background }: Props) => {
 		weatherStatus;
 	return (
 		<div className={`main-card ${background}`}>
-			<WeatherSegment
-				alt='loc-icon'
-				text={location}
-				iconPath={locationIcon}
-			/>
+			<section>
+				<WeatherSegment
+					alt='loc-icon'
+					text={location}
+					iconPath={locationIcon}
+				/>
+				<p className='weather-description'>{weatherDescription}</p>
+			</section>
 			<p className='temperature'> {`${temperature}°`} </p>
-			<div className='bottom-section'>
+			<section>
 				<WeatherSegment
 					alt='wind-icon'
 					text={`${windSpeed} Km/h`}
@@ -32,8 +35,7 @@ const MainCard = ({ weatherStatus, background }: Props) => {
 					text={`${pressure} hpa`}
 					iconPath={pressureIcon}
 				/>
-				<p className='weather-description'>{weatherDescription}</p>
-			</div>
+			</section>
 		</div>
 	);
 };

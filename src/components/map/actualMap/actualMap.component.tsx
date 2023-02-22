@@ -3,10 +3,11 @@ import './actualMap.style.css'
 import { TileLayer } from 'react-leaflet';
 
 type Props = {
-    setCoordinates: React.Dispatch<React.SetStateAction<{lat: number, lng: number}>>
+    setCoordinates: React.Dispatch<React.SetStateAction<{lat: number, lng: number}>>,
+    getCurrentLocation: () => [number, number],
 }
 
-const MapEventHandler = ({setCoordinates}: Props) => {
+const MapEventHandler = ({setCoordinates}: {setCoordinates: React.Dispatch<React.SetStateAction<{lat: number, lng: number}>>}) => {
     useMapEvent('click', (e) => {
         const {lat, lng} = e.latlng;
         setCoordinates({
@@ -17,12 +18,11 @@ const MapEventHandler = ({setCoordinates}: Props) => {
     return null;
 }
 
-const ActualMap = ({setCoordinates}: Props) => {
+const ActualMap = ({setCoordinates, getCurrentLocation}: Props) => {
     return(  
-        <MapContainer center={[30.0444, 31.2357]} zoom={13} scrollWheelZoom={true}>
+        <MapContainer center={getCurrentLocation()} zoom={13} scrollWheelZoom={true}>
             <TileLayer
-                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                url="https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png?api_key=a1b10435-899d-4f36-899a-5444aa3388bb"
+                url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png?api_key=a1b10435-899d-4f36-899a-5444aa3388bb"
             />
             <MapEventHandler setCoordinates={setCoordinates}/>
         </MapContainer>  

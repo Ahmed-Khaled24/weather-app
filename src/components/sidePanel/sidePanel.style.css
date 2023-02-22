@@ -4,6 +4,9 @@
     width: 20%;
     border-right: 2px solid rgba(255, 255, 255, 0.1);
     position: relative;
+    transition-property: left;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
 }
 
 .logo {
@@ -44,4 +47,31 @@
 }
 .copy-rights:hover{
     opacity: 1;
+}
+
+@media(max-width: 750px){
+    .side-panel {
+        position: fixed;
+        top: 0;
+        width: 70%;
+        height: 100vh;
+        z-index: 1;
+        background-color: #212529;
+    }
+    .logo {
+        font-size: 46px;
+    }
+    .closed{
+        left: -100%;
+    }
+    .open {
+        left: 0;
+    }
+}
+
+.closed{
+    /* hehe */
+}
+.open {
+    /* hehe */
 }

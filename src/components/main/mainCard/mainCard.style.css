@@ -42,7 +42,7 @@
 	align-items: center;
 }
 
-.bottom-section {
+section {
 	display: flex;
 	justify-content: space-between;
 }
@@ -51,4 +51,39 @@
 	font-size: 96px !important;
 	align-self: center;
 	font-weight: 300;
+}
+
+@media(max-width: 750px){
+    .main-card{
+        width: 100%;
+    }
+}
+
+@media(max-width: 600px){
+	.main-card img {
+		width: 20px;
+	}
+	.main-card p {
+		font-size: 18px;
+	}
+	.main-card {
+		padding: 10px;
+	}
+}
+
+@media(max-width: 450px){
+	.main-card img {
+		width: 20px;
+	}
+	.main-card p {
+		font-size: 18px;
+	}
+	.main-card {
+		padding: 20px;
+		height: 40vh;
+	}
+	.temperature {
+		font-size: 120px !important;
+		font-weight: 400;
+	}
 }
